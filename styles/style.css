@@ -9,13 +9,15 @@ html {
 }
 
 .page {
+  display:flex;
+  align-items: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
-  background-color: #1b1919;
+  background-color: #1B1919;
 }
 
 h1,
@@ -36,3 +38,230 @@ ul,
 ol {
   list-style: none;
 }
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.content {
+  display: flex;
+  justify-content: end;
+  gap: 30px;
+  margin: 0 30px;
+}
+.result {
+  min-width: 711px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.result__video-container {
+  position: relative;
+  width: 711px;
+  height: 386px;
+  margin-bottom: 16px;
+}
+
+.result__video {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: center;
+
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 40px;
+}
+
+
+.search-form__textfield {
+  appearance: none;
+  width: 225px;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.70);
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-left: none;
+  border-right: none;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  padding: 2px 0;
+}
+
+.search-form__fieldset {
+  display: flex;
+  border: none;
+  width: 100%;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.search-form__fieldset-title {
+  color: #FFF;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.search-form__label {
+  display: flex;
+  width: fit-content;
+  gap: 5px;
+  cursor: pointer;
+  align-items: center;
+}
+
+
+
+.search-form__label-text {
+  color: #FFF;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+.search-form__submit-button {
+  display: flex;
+  width: 194px;
+  height: 34px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  background-color: transparent;
+  color: #FFF;
+  text-align: center;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border: 1px solid #FFF; 
+}
+
+.content__details {
+  height: 100%;
+  width: 100%;  
+}
+
+.content__list {
+  position: relative;
+}
+
+.content__list::-webkit-scrollbar { 
+  width: 0; 
+}
+
+.content__list-item:not(:last-child) {
+  margin-bottom: 34px;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+  object-fit: cover;
+}
+
+.title {
+  padding: 0 0 26px 0;
+  color: #FFF;
+  font-family: Oswald;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 94%;
+  text-transform: uppercase;
+  }
+
+  .content__accent {
+    color: #545050;
+    font-family: Oswald;
+    font-size: 75px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 94%; /* 70.5px */
+    text-transform: uppercase;
+  }
+
+  .content__list {
+    overflow-y: scroll;
+    height: 298px;
+  }
+
+  .content__card-link {
+    text-decoration: none;
+  }
+
+  .content__video-card-title {
+    margin-bottom: 6px;
+    color: #FFF;
+    font-family: Oswald;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 30px */
+    text-transform: uppercase;
+  }
+
+  .content__video-card-description {
+    color: #FFF;
+    font-family: Fira Sans Condensed;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16.2px; /* 90% */
+  }
+
+  .content__video-card {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .more-button {
+    display: flex;
+  width: 399px;
+  height: 34px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  background-color: transparent;
+  color: #FFF;
+  text-align: center;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border: 1px solid #FFF; 
+  }
+
+
+
+
+
+
