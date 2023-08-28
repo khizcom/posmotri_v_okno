@@ -76,7 +76,7 @@ ol {
 .search-form {
   display: flex;
   gap: 40px;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .button {
@@ -261,6 +261,15 @@ ol {
     width: 19px;
     height: 19px;
     border: 1px solid #FFF;
+  }
+
+  .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+    content: '';
+    display: block;
+    background-color: #FFF;
+    width: 15px;
+    height: 15px;
+    margin: 1px 0 0 1px;
   }
 
 
