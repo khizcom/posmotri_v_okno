@@ -63,20 +63,21 @@ ol {
 .result__video-container {
   position: relative;
   width: 711px;
-  margin: 0 0 11px ;
+  height: 386px;
+  margin-bottom: 16px;
 }
 
 .result__video {
-  inline-size: 100%;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
   object-position: center;
-
 }
 
 .search-form {
   display: flex;
   gap: 40px;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .button {
@@ -97,6 +98,12 @@ ol {
   cursor: pointer;
 }
 
+.button:active {
+  background: #545050; 
+}
+
+
+
 
 .search-form__textfield {
   width: 225px;
@@ -114,6 +121,15 @@ ol {
   padding: 2px 0;
 }
 
+.search-form__textfield:focus {
+  outline: none;
+}
+
+
+.search-form__textfield:focus-visible {
+  outline: none;
+}
+
 .search-form__fieldset {
   display: flex;
   border: none;
@@ -122,13 +138,6 @@ ol {
   gap: 5px;
 }
 
-.search-form__textfield:focus {
-  outline: none;
-}
-
-.search-form__textfield:focus-visible {
-  outline: none;
-}
 
 .search-form__fieldset-title {
   color: #FFF;
@@ -149,6 +158,7 @@ ol {
 
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #FFF;
+  outline-offset: 2px;
   
 }
 
@@ -162,6 +172,11 @@ ol {
   line-height: normal;
 }
 
+.search-form__label-text:hover {
+text-decoration: underline;
+}
+
+
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
@@ -172,11 +187,17 @@ ol {
 .search-form__submit-button {  
   width: 194px;
   height: 34px;
+  align-self: self-end;
 }
+
+.search-form__submit-button:hover {
+  text-decoration: underline;
+}
+
 
 .content__details {
   height: 100%;
-  width: 100%;  
+  width: 100%; 
 }
 
 .content__list {
@@ -189,6 +210,10 @@ ol {
 
 .content__list-item:not(:last-child) {
   margin-bottom: 34px;
+}
+
+.content__list-item:focus-visible{
+  outline: none;
 }
 
 .content__video-card-thumbnail {
@@ -224,21 +249,29 @@ ol {
   }
 
   .content__card-link {
+    display: block;
+    margin: 2px;
     text-decoration: none;
   }
 
+  .content__card-link:focus-visible {
+    outline: 1px solid #FFF;
+  }
+
   .content__video-card-title {
-    margin-bottom: 6px;
+    padding: 2px 2px 5px;
     color: #FFF;
     font-family: Oswald;
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
     line-height: 100%; /* 30px */
+    hyphens: auto;
     text-transform: uppercase;
   }
 
   .content__video-card-description {
+    padding: 0 2px;
     color: #FFF;
     font-family: Fira Sans Condensed;
     font-size: 18px;
@@ -271,6 +304,16 @@ ol {
     height: 15px;
     margin: 1px 0 0 1px;
   }
+
+.content__card-link:hover {
+  text-decoration: underline 1px #FFF;
+}
+
+.content__video-card:active {
+  background: #545050; 
+  text-decoration: none;
+}
+
 
 
 
