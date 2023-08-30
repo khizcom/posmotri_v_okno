@@ -9,15 +9,15 @@ html {
 }
 
 .page {
-  display:flex;
+  display: flex;
   align-items: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
-  background-color: #1B1919;
+  background-color: #1b1919;
 }
 
 h1,
@@ -56,8 +56,8 @@ ol {
   margin: 0 30px;
 }
 
- .result {  
-  align-self:flex-end;
+.result {
+  align-self: flex-end;
 }
 
 .result__video-container {
@@ -87,28 +87,38 @@ ol {
   gap: 10px;
   flex-shrink: 0;
   background-color: transparent;
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-family: Fira Sans Condensed;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
   cursor: pointer;
 }
 
-.button:active {
-  background: #545050; 
+.button:focus {
+  outline: none;
 }
 
+.button:hover {
+  text-decoration: 1px solid underline;
+}
 
+.button:active {
+  background: #545050;
+}
 
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
 
 .search-form__textfield {
   width: 225px;
   background-color: transparent;
-  color: rgba(255, 255, 255, 0.70);
+  color: rgba(255, 255, 255, 0.7);
   font-family: Fira Sans Condensed;
   font-size: 18px;
   font-style: normal;
@@ -116,15 +126,14 @@ ol {
   line-height: normal;
   border-left: none;
   border-right: none;
-  border-top: 1px solid #FFF;
-  border-bottom: 1px solid #FFF;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
   padding: 2px 0;
 }
 
 .search-form__textfield:focus {
   outline: none;
 }
-
 
 .search-form__textfield:focus-visible {
   outline: none;
@@ -138,9 +147,8 @@ ol {
   gap: 5px;
 }
 
-
 .search-form__fieldset-title {
-  color: #FFF;
+  color: #fff;
   font-family: Fira Sans Condensed;
   font-size: 18px;
   font-style: normal;
@@ -157,25 +165,22 @@ ol {
 }
 
 .search-form__label:has(:focus-visible) {
-  outline: 1px solid #FFF;
+  outline: 1px solid #fff;
   outline-offset: 2px;
-  
 }
 
+.search-form__label_underline:hover {
+  text-decoration: 1px solid underline;
+}
 
 .search-form__label-text {
-  color: #FFF;
+  color: #fff;
   font-family: Fira Sans Condensed;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
-
-.search-form__label-text:hover {
-text-decoration: underline;
-}
-
 
 .search-form__checkbox-list {
   display: flex;
@@ -184,36 +189,30 @@ text-decoration: underline;
   align-items: center;
 }
 
-.search-form__submit-button {  
+.search-form__pseudo-checkbox {
+  width: 19px;
+  height: 19px;
+  border: 1px solid #fff;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  content: "";
+  display: block;
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+  margin: 1px 0 0 1px;
+}
+
+.search-form__submit-button {
   width: 194px;
   height: 34px;
   align-self: self-end;
 }
 
-.search-form__submit-button:hover {
-  text-decoration: underline;
-}
-
-
 .content__details {
   height: 100%;
-  width: 100%; 
-}
-
-.content__list {
-  position: relative;
-}
-
-.content__list::-webkit-scrollbar { 
-  width: 0; 
-}
-
-.content__list-item:not(:last-child) {
-  margin-bottom: 34px;
-}
-
-.content__list-item:focus-visible{
-  outline: none;
+  width: 100%;
 }
 
 .content__video-card-thumbnail {
@@ -224,99 +223,94 @@ text-decoration: underline;
 
 .title {
   padding: 0 0 26px 0;
-  color: #FFF;
+  color: #fff;
   font-family: Oswald;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
   line-height: 94%;
   text-transform: uppercase;
-  }
-
-  .content__accent {
-    color: #545050;
-    font-family: Oswald;
-    font-size: 75px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 94%; /* 70.5px */
-    text-transform: uppercase;
-  }
-
-  .content__list {
-    overflow-y: scroll;
-    height: 298px;
-  }
-
-  .content__card-link {
-    display: block;
-    margin: 2px;
-    text-decoration: none;
-  }
-
-  .content__card-link:focus-visible {
-    outline: 1px solid #FFF;
-  }
-
-  .content__video-card-title {
-    padding: 2px 2px 5px;
-    color: #FFF;
-    font-family: Oswald;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 100%; /* 30px */
-    hyphens: auto;
-    text-transform: uppercase;
-  }
-
-  .content__video-card-description {
-    padding: 0 2px;
-    color: #FFF;
-    font-family: Fira Sans Condensed;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 16.2px; /* 90% */
-  }
-
-  .content__video-card {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .more-button {  
-  width: 399px;
-  height: 34px; 
-  }
-
-  .search-form__pseudo-checkbox {
-    width: 19px;
-    height: 19px;
-    border: 1px solid #FFF;
-  }
-
-  .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
-    content: '';
-    display: block;
-    background-color: #FFF;
-    width: 15px;
-    height: 15px;
-    margin: 1px 0 0 1px;
-  }
-
-.content__card-link:hover {
-  text-decoration: underline 1px #FFF;
 }
 
-.content__video-card:active {
-  background: #545050; 
+.content__accent {
+  color: #545050;
+  font-family: Oswald;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 94%; /* 70.5px */
+  text-transform: uppercase;
+}
+
+.content__list {
+  position: relative;
+  overflow-y: scroll;
+  height: 298px;
+}
+
+.content__list::-webkit-scrollbar {
+  width: 0;
+}
+
+.content__list-item:not(:last-child) {
+  margin-bottom: 34px;
+}
+
+.content__list-item:focus-visible {
+  outline: none;
+}
+
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__card-link {
+  display: block;
+  margin: 2px;
   text-decoration: none;
 }
 
+.content__card-link:hover {
+  text-decoration: underline 1px #fff;
+}
 
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
+}
 
+.content__video-card-title {
+  padding: 2px 2px 5px;
+  color: #fff;
+  font-family: Oswald;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 30px */
+  hyphens: auto;
+  text-transform: uppercase;
+}
 
+.content__video-card-description {
+  padding: 0 2px;
+  color: #fff;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16.2px; /* 90% */
+}
 
+.content__video-card {
+  display: flex;
+  justify-content: space-between;
+}
 
+.content__video-card:active {
+  background-color: #545050;
+  text-decoration: none;
+}
 
+.more-button {
+  width: 399px;
+  height: 34px;
+}
